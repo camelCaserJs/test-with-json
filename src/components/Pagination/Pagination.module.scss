@@ -1,0 +1,49 @@
+@import "../../styles/variables.module";
+
+.Pagination {
+  display: flex;
+  &__group {
+    display: flex;
+    gap: 2px;
+    &:not(&:last-child)::after {
+      content: "...";
+      display: block;
+      letter-spacing: 1.5px;
+      padding: 3px;
+      line-height: 35px;
+    }
+  }
+  &__button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: .1s ease;
+    background-color: $backgroundGray;
+    color: $textBlack;
+    cursor: pointer;
+    &:first-child {
+      border-radius: 10px 3px 3px 10px;
+    }
+    &:last-child {
+      border-radius: 3px 10px 10px 3px;
+    }
+    &:first-child:last-child {
+      border-radius: 10px;
+    }
+    &:hover {
+      background-color: $backgroundGrayDarken;
+    }
+    &_active {
+      background-color: $backgroundGrayDarkenExtra !important;
+    }
+  }
+}

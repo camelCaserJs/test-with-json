@@ -1,0 +1,34 @@
+@import "../../styles/variables.module";
+
+.Toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 10px 0;
+  background-color: $backgroundWhite;
+  top: 0px;
+  position: sticky;
+  z-index: 2;
+
+  &__filters {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    gap: 20px;
+  }
+
+  &__clearButton {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: $textGray;
+    padding: 0;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+}

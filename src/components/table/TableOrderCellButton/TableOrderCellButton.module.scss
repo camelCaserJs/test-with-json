@@ -1,0 +1,29 @@
+@import "../../../styles/variables.module";
+
+.TableOrderCellButton {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: $textBlack;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: $backgroundGray;
+  padding: 0.65em 0.8em;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .1s ease;
+  justify-content: flex-end;
+  gap: 10px;
+  &:hover {
+    background-color: $backgroundGrayDarken;
+  }
+  &__arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

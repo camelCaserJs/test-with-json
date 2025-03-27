@@ -1,0 +1,28 @@
+@import "../../../styles/variables.module";
+
+.TableHeader {
+  position: sticky;
+  top: 80px;
+  background-color: $backgroundWhite;
+  z-index: 1;
+  &__th {
+    padding: 0 0.9em;
+    padding-bottom: 20px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__cell {
+    text-align: left;
+
+    &_right {
+      text-align: right;
+    }
+  }
+}

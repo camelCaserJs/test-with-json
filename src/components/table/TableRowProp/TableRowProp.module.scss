@@ -1,0 +1,15 @@
+@import "../../../styles/variables.module";
+
+.TableRowProp {
+  font-size: .85rem;
+  td {
+    padding: .45rem 0;
+  }
+  &__name {
+    padding-right: 1.8rem !important;
+    color: $textGray;
+  }
+  a {
+    text-decoration: underline;
+  }
+}

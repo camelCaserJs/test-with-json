@@ -1,0 +1,35 @@
+.TableRow {
+  &__td {
+    padding: 1.5rem 0.9rem;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &:last-child {
+    .TableRow__td {
+      border-bottom: none !important;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    flex-direction: column;
+
+    &_right {
+      align-items: flex-end;
+    }
+
+    &Value {
+      font-weight: 600;
+      margin-bottom: 0.6em;
+    }
+  }
+}

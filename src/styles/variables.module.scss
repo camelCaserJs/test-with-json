@@ -1,0 +1,21 @@
+$textBlack: #333;
+$textGray: #aaa;
+
+$backgroundGray: #f5f5f5;
+$backgroundWhite: #fff;
+$backgroundGrayDarken: darken($backgroundGray, 2%);
+$backgroundGrayDarkenExtra: darken($backgroundGray, 7%);
+
+$accent: #00D79E;
+
+:export {
+  textBlack: $textBlack;
+  textGray: $textGray;
+
+  backgroundGray: $backgroundGray;
+  backgroundWhite: $backgroundWhite;
+  backgroundGrayDarken: $backgroundGrayDarken;
+  backgroundGrayDarkenExtra: $backgroundGrayDarkenExtra;
+
+  accent: $accent;
+}

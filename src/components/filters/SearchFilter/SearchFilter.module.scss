@@ -1,0 +1,87 @@
+@import "../../../styles/variables.module";
+
+.SearchFilter {
+  position: relative;
+  flex-basis: 300px;
+
+  &__label {
+    display: flex;
+  }
+
+  &__input {
+    padding: 0 15px;
+    padding-top: 20px;
+    padding-right: 50px;
+    background-color: $backgroundGray;
+    border-radius: 15px;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.1s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    display: block;
+    flex-grow: 1;
+    box-sizing: border-box;
+    height: 60px;
+    outline: none;
+    box-shadow: none;
+    color: $textBlack;
+    &:hover {
+      background-color: darken($backgroundGray, 2%);
+    }
+    &:focus {
+      background-color: $backgroundWhite;
+      outline: 2px solid $textBlack;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    box-shadow: none;
+    position: absolute;
+    padding: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.1s;
+    opacity: 0.1;
+    &:hover {
+      opacity: 0.15;
+    }
+  }
+
+  &__placeholder {
+    opacity: .4;
+    position: absolute;
+    transition: 0.1s ease;
+    top: 10px;
+    left: 15px;
+    cursor: text;
+    font-size: .9em;
+  }
+
+  &__input:placeholder-shown + &__placeholder {
+    font-size: 1em;
+    top: 22px;
+    left: 15px;
+  }
+
+  &__input:focus + &__placeholder {
+    top: 10px !important;
+    left: 15px !important;
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 1400px) {
+  .SearchFilter {
+    flex-basis: 200px;
+  }
+}
