@@ -30,13 +30,13 @@
     background-color: $backgroundGray;
     color: $textBlack;
     cursor: pointer;
-    &:first-child {
+    &:first-of-type {
       border-radius: 10px 3px 3px 10px;
     }
     &:last-child {
       border-radius: 3px 10px 10px 3px;
     }
-    &:first-child:last-child {
+    &:first-of-type:last-child {
       border-radius: 10px;
     }
     &:hover {

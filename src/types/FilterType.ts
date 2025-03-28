@@ -1,10 +1,10 @@
-type FilterOptionType = {
+export type FilterOptionType = {
     value: string, label: string
 }
 
 type FilterType = {
     field: string;
-    value: string | null;
+    value: FilterOptionType | null;
     options: FilterOptionType[];
     placeholder: string;
 }

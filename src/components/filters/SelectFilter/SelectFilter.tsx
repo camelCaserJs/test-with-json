@@ -1,23 +1,27 @@
-import Select, {components, DropdownIndicatorProps} from "react-select";
+import Select from "react-select";
 import variables from '../../../styles/variables.module.scss';
 import styles from './SelectFilter.module.scss';
-import ArrowDownIcon from "../../icons/ArrowDownIcon.tsx";
-import FilterType from "../../../types/FilterType.ts";
-
-const DropdownIndicator = (props: DropdownIndicatorProps) => {
-    return (
-        <components.DropdownIndicator {...props}>
-            <ArrowDownIcon color={'rgba(0,0,0,.1)'}/>
-        </components.DropdownIndicator>
-    );
-};
-
+import {FilterOptionType} from "../../../types/FilterType.ts";
 export default function SelectFilter(
     {
+        field,
+        value,
         options,
         placeholder,
-        value
-    }: FilterType) {
+        onChange
+    }: {
+        field: string,
+        value: FilterOptionType | null,
+        options: FilterOptionType[],
+        placeholder: string,
+        onChange: (field: string, value: FilterOptionType | null) => void,
+    }) {
+
+    const handleOnChange = (option: unknown) => {
+        const value = option as FilterOptionType;
+        onChange(field, value);
+    }
+
     return (
         <Select
             placeholder={placeholder}
@@ -51,7 +55,7 @@ export default function SelectFilter(
                     cursor: "pointer",
                     marginBottom: "2px",
                     borderRadius: "3px",
-                    "&:first-child": {
+                    "&:first-of-type": {
                         borderRadius: "10px 10px 3px 3px"
                     },
                     "&:last-child": {
@@ -65,12 +69,14 @@ export default function SelectFilter(
                     ...provided,
                     border: "none",
                     boxShadow: "none",
-                    backgroundColor: "transparent",
+                    backgroundColor: variables.backgroundWhite,
                     borderRadius: 0
                 }),
             }}
             options={options}
-            components={{DropdownIndicator, IndicatorSeparator: () => null}}
+            components={{IndicatorSeparator: () => null}}
+            onChange={handleOnChange}
+            value={value}
         />
     )
 }

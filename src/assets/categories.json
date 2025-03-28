@@ -1,0 +1,62 @@
+[
+  {
+    "value": "Beauty & Personal Care",
+    "label": "Beauty & Personal Care"
+  },
+  {
+    "value": "Grocery & Gourmet Food",
+    "label": "Grocery & Gourmet Food"
+  },
+  {
+    "value": "Health & Household",
+    "label": "Health & Household"
+  },
+  {
+    "value": "Automotive",
+    "label": "Automotive"
+  },
+  {
+    "value": "Home & Kitchen",
+    "label": "Home & Kitchen"
+  },
+  {
+    "value": "Baby Products",
+    "label": "Baby Products"
+  },
+  {
+    "value": "Electronics",
+    "label": "Electronics"
+  },
+  {
+    "value": "Books",
+    "label": "Books"
+  },
+  {
+    "value": "Clothing, Shoes & Jewelry",
+    "label": "Clothing, Shoes & Jewelry"
+  },
+  {
+    "value": "Video Games",
+    "label": "Video Games"
+  },
+  {
+    "value": "Toys & Games",
+    "label": "Toys & Games"
+  },
+  {
+    "value": "Pet Supplies",
+    "label": "Pet Supplies"
+  },
+  {
+    "value": "Patio, Lawn & Garden",
+    "label": "Patio, Lawn & Garden"
+  },
+  {
+    "value": "Movies & TV",
+    "label": "Movies & TV"
+  },
+  {
+    "value": "Tools & Home Improvement",
+    "label": "Tools & Home Improvement"
+  }
+]
